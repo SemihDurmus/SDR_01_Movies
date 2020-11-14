@@ -1,14 +1,12 @@
-import { StyledCardWrapper, StyledText } from "./Card.style";
+import { StyledCardWrapper, StyledText, StyledMovieImage } from "./Card.style";
 
-export const Card = (props) => {
+export const Card = ({ title, imgSrc }) => {
   return (
     <div>
       <StyledCardWrapper>
-        <StyledText>{props.title}</StyledText>
-        <StyledText>{props.avg}</StyledText>
-        <img src={props.imgPath} />
+        <StyledMovieImage src={imgSrc} alt="Poster not found" />
+        <StyledText>{title}</StyledText>
       </StyledCardWrapper>
-      <p>{props.imgPath}</p>
     </div>
   );
 };
