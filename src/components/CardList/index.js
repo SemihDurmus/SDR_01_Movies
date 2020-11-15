@@ -8,8 +8,9 @@ export const CardList = ({ movieList, baseImageUrl }) => {
         <Card
           key={index}
           title={movie.title}
-          avg={movie.avg}
-          imgSrc={baseImageUrl + movie.poster_path}
+          avg={movie.vote_average}
+          poster_path={movie.poster_path}
+          baseImageUrl={baseImageUrl}
         />
       ))}
     </StyledCardList>

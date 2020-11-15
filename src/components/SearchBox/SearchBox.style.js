@@ -14,7 +14,7 @@ export const StyledSearchButton = styled(StyledButton)`
   top: 0;
   right: 0;
   border-radius: 50%;
-  color: #07051a;
+  color: tomato;
   text-align: center;
   font-size: 1.2rem;
   font-weight: 900;
@@ -33,7 +33,7 @@ export const StyledSearchInput = styled.input`
   ${(p) =>
     p.isColored &&
     css`
-      color: red;
+      color: tomato;
     `}
   /* border-radius: 1rem;
   margin-right: 0.5rem;
@@ -50,8 +50,11 @@ export const StyledSearchInput = styled.input`
   border: 0;
   display: none;
   font-size: 1em;
+  font-weight: bold;
   border-radius: 20px;
   padding: 0 20px;
+  padding-right: 160px;
+  overflow: scroll;
 `;
 
 // --------------SEARCHBOX----------------
@@ -68,13 +71,8 @@ export const StyledSearchBox = styled.div`
   outline: 0;
   margin-left: -1%;
 
-  /* input {
-    border-radius: 6px;
-    padding: 5px;
-  } */
-
   &:hover {
-    width: 200px;
+    width: 280px;
     cursor: pointer;
   }
 
@@ -86,6 +84,5 @@ export const StyledSearchBox = styled.div`
   &:hover button {
     background: #07051a;
     color: white;
-    /* background-color: transparent; */
   }
 `;
