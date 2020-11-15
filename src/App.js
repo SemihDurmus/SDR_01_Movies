@@ -12,8 +12,7 @@ const apiKey = "";
 const baseUrl = "https://api.themoviedb.org/3/search/movie";
 const baseImageUrl = "https://image.tmdb.org/t/p/w500";
 
-//const movieContext = createContext();
-const { Provider, Consumer } = createContext();
+export const MovieContext = createContext();
 
 function App() {
   const [movieList, setMovieList] = useState([]);
@@ -36,15 +35,19 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <h1>
-          <FontAwesomeIcon className="filmIcon" icon={faFilm} />
-          &nbsp; Movie Database &nbsp;
-          <FontAwesomeIcon className="filmIcon" icon={faFilm} />
-        </h1>
-        <SearchBox setSearchKeyword={setSearchKeyword} />
-      </header>
-      <CardList movieList={movieList} baseImageUrl={baseImageUrl} />
+      <MovieContext.Provider
+        value={{ movieList, baseImageUrl, setSearchKeyword }}
+      >
+        <header>
+          <h1>
+            <FontAwesomeIcon className="filmIcon" icon={faFilm} />
+            &nbsp; Movie Database &nbsp;
+            <FontAwesomeIcon className="filmIcon" icon={faFilm} />
+          </h1>
+          <SearchBox />
+        </header>
+        <CardList />
+      </MovieContext.Provider>
     </div>
   );
 }
