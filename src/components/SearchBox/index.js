@@ -4,7 +4,7 @@ import {
   StyledSearchInput,
   StyledSearchButton,
 } from "./SearchBox.style";
-import { MovieContext } from "../../App";
+import { MovieContext } from "../../Movie";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";

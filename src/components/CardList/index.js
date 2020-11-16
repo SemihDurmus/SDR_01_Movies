@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { MovieContext } from "../../App";
+import { MovieContext } from "../../Movie";
 
 import { Card } from "../Card";
 import { StyledCardList } from "./CardList.style";
@@ -16,6 +16,7 @@ export const CardList = () => {
           avg={movie.vote_average}
           poster_path={movie.poster_path}
           baseImageUrl={baseImageUrl}
+          id={movie.id}
         />
       ))}
     </StyledCardList>
