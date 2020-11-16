@@ -3,13 +3,17 @@ import { useHistory } from "react-router-dom";
 import { useContext } from "react";
 import { MovieContext } from "../../Movie";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInfoCircle, faHeart } from "@fortawesome/free-solid-svg-icons";
+
 import {
   StyledCardWrapper,
   StyledText,
   StyledAvg,
   StyledDesc,
   StyledMovieImage,
-  StyledFavButton,
+  StyledButtonContainer,
+  StyledButton,
 } from "./Card.style";
 
 import noPoster from "../../assets/na.png";
@@ -19,17 +23,25 @@ export const Card = ({ title, avg, poster_path, baseImageUrl, id }) => {
   const { setFav } = useContext(MovieContext);
 
   return (
-    <StyledCardWrapper
-    // onClick={() => history.push(`/detail/${id}`)}
-    >
+    <StyledCardWrapper>
       <StyledMovieImage
         src={poster_path ? baseImageUrl + poster_path : noPoster}
         alt={"Movie Poster"}
       />
+      <StyledButtonContainer>
+        <StyledButton onClick={() => history.push(`/detail/${id}`)}>
+          <FontAwesomeIcon className="btn" icon={faInfoCircle} />
+        </StyledButton>
+
+        <StyledAvg>{avg}</StyledAvg>
+
+        <StyledButton onClick={() => setFav(id)}>
+          <FontAwesomeIcon className="btn" icon={faHeart} />
+        </StyledButton>
+      </StyledButtonContainer>
+
       <StyledDesc>
-        <StyledFavButton onClick={() => setFav(id)}>FAV</StyledFavButton>
         <StyledText>{title}</StyledText>
-        <StyledAvg>&nbsp;{avg}</StyledAvg>
       </StyledDesc>
     </StyledCardWrapper>
   );

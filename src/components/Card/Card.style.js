@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const StyledCardWrapper = styled.div`
   width: 12rem;
-  height: 23rem;
+  height: 24rem;
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 16px;
@@ -15,7 +15,7 @@ export const StyledCardWrapper = styled.div`
   overflow: hidden;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
     background-color: #000;
     box-shadow: 0.1rem 0.1em 0.6rem tomato;
   }
@@ -24,7 +24,7 @@ export const StyledCardWrapper = styled.div`
 export const StyledMovieImage = styled.img`
   width: 100%;
   position: relative;
-  height: auto;
+  height: 70%;
 `;
 export const StyledText = styled.p`
   color: #95a5a6;
@@ -38,12 +38,37 @@ export const StyledAvg = styled.p`
 `;
 
 export const StyledDesc = styled.div`
+  width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
 `;
 
-export const StyledFavButton = styled.button`
-  height: 20px;
-  width: 30px;
-  background-color: cyan;
+export const StyledButtonContainer = styled.div`
+  width: 90%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const StyledButton = styled.button`
+  background-color: transparent;
+  border: none;
+
+  &:active {
+    outline: none;
+    border: none;
+  }
+
+  .btn {
+    color: #95a5a6;
+    font-size: 1.2rem;
+    transition: 200ms;
+  }
+  .btn:hover {
+    color: tomato;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
 `;

@@ -1,10 +1,8 @@
 import React from "react";
-import { Card } from "./components/Card";
+import { CardList } from "./components/CardList";
 
-export default function FavMovies() {
-  return (
-    <div>
-      <Card />
-    </div>
-  );
+function FavMovies() {
+  return null;
 }
+
+export default FavMovies;

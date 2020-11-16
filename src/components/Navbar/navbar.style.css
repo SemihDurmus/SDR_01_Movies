@@ -1,0 +1,31 @@
+.navbar {
+  height: 3.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 1px solid tomato;
+  position: sticky;
+  z-index: 12;
+}
+
+.navlink {
+  font-size: 1.3rem;
+  font-family: "Acme", sans-serif;
+
+  color: #e0e0e0;
+  font-weight: bold;
+  margin: 0 2rem;
+  text-decoration: none;
+  width: 3rem;
+  transition: 0.3s;
+}
+
+.navlink:hover {
+  color: tomato;
+}
+
+.logo {
+  margin: 0 2.5rem;
+  font-size: 2.5rem;
+  color: tomato;
+}
