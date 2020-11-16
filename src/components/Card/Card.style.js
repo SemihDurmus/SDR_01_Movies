@@ -41,3 +41,9 @@ export const StyledDesc = styled.div`
   display: flex;
   align-items: center;
 `;
+
+export const StyledFavButton = styled.button`
+  height: 20px;
+  width: 30px;
+  background-color: cyan;
+`;

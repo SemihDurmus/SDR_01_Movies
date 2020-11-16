@@ -5,6 +5,7 @@ export default function Navbar() {
   return (
     <div>
       <Link to="/"> HOME </Link>
+      <Link to="/fav/"> FAV </Link>
     </div>
   );
 }

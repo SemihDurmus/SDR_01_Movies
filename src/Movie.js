@@ -17,6 +17,8 @@ export const MovieContext = createContext();
 function Movie() {
   const [movieList, setMovieList] = useState([]);
   const [searchKeyword, setSearchKeyword] = useState("earth");
+  const [fav, setFav] = useState(null);
+  const [favList, setFavList] = useState([]);
 
   useEffect(() => {
     axios
@@ -33,10 +35,16 @@ function Movie() {
       .finally();
   }, [searchKeyword]);
 
+  console.log(favList);
+
+  useEffect(() => {
+    setFavList((preFav) => [...preFav, fav]);
+  }, [fav]);
+
   return (
     <div className="App">
       <MovieContext.Provider
-        value={{ movieList, baseImageUrl, setSearchKeyword }}
+        value={{ movieList, baseImageUrl, setSearchKeyword, setFav }}
       >
         <header>
           <h1>
