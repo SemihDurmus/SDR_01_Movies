@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+<h1 align="center">SDR_01 Movies</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<div align="center">
+  <h3>
+    <a href="https://github.com/SemihDurmus/SDR_01_Movies.git">
+      Project Source
+    </a>
+ 
+  </h3>
+</div>
 
-In the project directory, you can run:
+<!-- TABLE OF CONTENTS -->
 
-### `yarn start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Overview](#overview)
+- [Built With](#built-with)
+- [Features](#features)
+- [How to use](#how-to-use)
+- [Acknowledgements](#acknowledgements)
+- [Contact](#contact)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<!-- OVERVIEW -->
 
-### `yarn test`
+## Overview
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<!-- <img src="src/assets/rest1.gif" height="500">-->
 
-### `yarn build`
+### Built With
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [React.js](https://reactjs.org/)
+- Code Buddy : [Ramazan Aksu](https://github.com/raymondaksu)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+## Features
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This app comprises use of Routing, Context, API and local storage in React.js
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- When the user lands the Home page he/she can see a group of movie cards pulled from the database in advance.
+- User can search for movies by entering the search string values. Then can either press the button or press enter to bring the relevant movie cards to screen.
+- Each movie card contains two buttons: one for directing to detailed information page and the other for adding the movie to favorites.
+- User can view the favorite movies (stored in local history) any time he/she enters the website.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## How To Use
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+To use this application, the packages below should be installed prior to running the app. 
 
-## Learn More
+```
+    "@fortawesome/fontawesome-svg-core": "^1.2.32",
+    "@fortawesome/free-solid-svg-icons": "^5.15.1",
+    "@fortawesome/react-fontawesome": "^0.1.12",
+    
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    
+    "axios": "^0.21.0",
+    
+    "node": "^15.2.0",
+    
+    "react": "^17.0.1",
+    
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    
+    "react-scripts": "4.0.0",
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    "styled-components": "^5.2.1",
+    "web-vitals": "^0.2.4"
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
 
-### Code Splitting
+## Acknowledgements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For exmpale -->
 
-### Analyzing the Bundle Size
+- [Source of APIs : The Movie Database](https://www.themoviedb.org/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contact
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- GitHub [SemihDurmus](https://github.com/SemihDurmus)
+- Linkedin [@Semih Durmus](https://www.linkedin.com/in/semih-durmus-0548751b7/)
