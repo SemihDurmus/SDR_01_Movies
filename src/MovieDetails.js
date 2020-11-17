@@ -23,6 +23,7 @@ const baseImageUrl = "https://image.tmdb.org/t/p/w500";
 export default function MovieDetails() {
   const [movieDetails, setMovieDetails] = useState();
   const { id } = useParams();
+  const history = useHistory();
 
   useEffect(() => {
     axios
@@ -67,9 +68,7 @@ export default function MovieDetails() {
           </tr>
         </StyledTable>
       </StyledMiniWrapper>
-      <StyledButton
-      // onClick={() => history.push(`/detail/`)}
-      >
+      <StyledButton onClick={() => history.goBack()}>
         <FontAwesomeIcon className="btn" icon={faArrowCircleLeft} />
       </StyledButton>
     </StyledWrapper>

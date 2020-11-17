@@ -35,11 +35,21 @@ function Movie() {
       .finally();
   }, [searchKeyword]);
 
-  console.log(favList);
+  useEffect(() => {
+    setFavList(localStorage.getItem("FavStorage") || []);
+  }, [fav]);
 
   useEffect(() => {
-    setFavList((preFav) => [...preFav, fav]);
-  }, [fav]);
+    console.log("fav", fav);
+    console.log("Movielist", movieList);
+    const filteredList = movieList.filter((x) => x.id == fav);
+    console.log("Filtered List", filteredList);
+    let temp = (favList) => [...favList, filteredList];
+    console.log(temp);
+    localStorage.setItem("FavStorage", temp);
+
+    //localStorage.clear();
+  }, [favList]);
 
   return (
     <div className="App">
