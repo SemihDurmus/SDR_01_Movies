@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { useState, useEffect, createContext, useCallback } from "react";
 import axios from "axios";
 
 import "./Movie.css";
@@ -17,7 +17,7 @@ export const MovieContext = createContext();
 function Movie() {
   const [movieList, setMovieList] = useState([]);
   const [searchKeyword, setSearchKeyword] = useState("earth");
-  const [fav, setFav] = useState(null);
+  const [fav, setFav] = useState('');
   const [favList, setFavList] = useState([]);
 
   useEffect(() => {
@@ -36,20 +36,15 @@ function Movie() {
   }, [searchKeyword]);
 
   useEffect(() => {
-    setFavList(localStorage.getItem("FavStorage") || []);
+    setFavList((JSON.parse(localStorage.getItem("FavStorage6")).filter((x) => x.length)) || []);
   }, [fav]);
 
   useEffect(() => {
-    console.log("fav", fav);
-    console.log("Movielist", movieList);
-    const filteredList = movieList.filter((x) => x.id == fav);
-    console.log("Filtered List", filteredList);
-    let temp = (favList) => [...favList, filteredList];
-    console.log(temp);
-    localStorage.setItem("FavStorage", temp);
-
-    //localStorage.clear();
+    let temp = movieList.filter((item) => item.id == fav);
+    localStorage.setItem("FavStorage6", JSON.stringify([...favList, temp]));
   }, [favList]);
+
+  console.log(favList);
 
   return (
     <div className="App">
