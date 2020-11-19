@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext, useCallback } from "react";
+import React, { useState, useEffect, createContext } from "react";
 import axios from "axios";
 
 import "./Movie.css";
@@ -17,7 +17,7 @@ export const MovieContext = createContext();
 function Movie() {
   const [movieList, setMovieList] = useState([]);
   const [searchKeyword, setSearchKeyword] = useState("earth");
-  const [fav, setFav] = useState('');
+  const [fav, setFav] = useState("");
   const [favList, setFavList] = useState([]);
 
   useEffect(() => {
@@ -36,7 +36,11 @@ function Movie() {
   }, [searchKeyword]);
 
   useEffect(() => {
-    setFavList((JSON.parse(localStorage.getItem("FavStorage6")).filter((x) => x.length)) || []);
+    setFavList(
+      JSON.parse(localStorage.getItem("FavStorage6")).filter(
+        (x) => x.length || typeof x == "object"
+      )
+    );
   }, [fav]);
 
   useEffect(() => {

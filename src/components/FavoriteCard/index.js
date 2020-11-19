@@ -1,10 +1,12 @@
+import React, {useEffect} from 'react';
+
 import { useHistory } from "react-router-dom";
 
-import { useContext } from "react";
-import { MovieContext } from "../../Movie";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInfoCircle, faHeart } from "@fortawesome/free-solid-svg-icons";
+import {
+  faInfoCircle,
+  faTrash,
+} from "@fortawesome/free-solid-svg-icons";
 
 import {
   StyledCardWrapper,
@@ -14,13 +16,12 @@ import {
   StyledMovieImage,
   StyledButtonContainer,
   StyledButton,
-} from "./Card.style";
+} from "../Card/Card.style";
 
 import noPoster from "../../assets/na.png";
 
-export const Card = ({ title, avg, poster_path, baseImageUrl, id }) => {
+export const FavoriteCard = ({ title, avg, poster_path, baseImageUrl, id, deleteFav }) => {
   const history = useHistory();
-  const { setFav } = useContext(MovieContext);
 
   return (
     <StyledCardWrapper>
@@ -35,8 +36,8 @@ export const Card = ({ title, avg, poster_path, baseImageUrl, id }) => {
 
         <StyledAvg>{avg}</StyledAvg>
 
-        <StyledButton onClick={() => setFav(id) || null}>
-          <FontAwesomeIcon className="btn" icon={faHeart} />
+        <StyledButton onClick={() => deleteFav(id)}>
+          <FontAwesomeIcon className="btn" icon={faTrash} />
         </StyledButton>
       </StyledButtonContainer>
 
