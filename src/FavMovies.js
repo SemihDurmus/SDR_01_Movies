@@ -5,9 +5,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilm } from "@fortawesome/free-solid-svg-icons";
 import { useHistory } from "react-router-dom";
 
+
 const baseImageUrl = "https://image.tmdb.org/t/p/w500";
 
 function FavMovies() {
+
   const temporary = JSON.parse(localStorage.getItem("FavStorage6"));
   const [flag, setFlag] = useState(false);
   const history = useHistory();
@@ -19,6 +21,7 @@ function FavMovies() {
   filmList = filmList.filter(
     (item, index, self) => index === self.findIndex((t) => t.id === item.id)
   );
+
 
   function deleteFav(id) {
     const updatedList = filmList.filter((item) => item.id !== id);
@@ -35,6 +38,7 @@ function FavMovies() {
   // }, [flag]);
 
   // localStorage.setItem("FavStorage6", JSON.stringify(filmList));
+
 
   console.log(filmList);
 
@@ -57,6 +61,7 @@ function FavMovies() {
           id={movie.id}
           deleteFav={deleteFav}
         />
+
       ))}
     </StyledCardList>
   );
