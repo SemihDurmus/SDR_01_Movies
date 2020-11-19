@@ -37,8 +37,11 @@ function Movie() {
 
   useEffect(() => {
     setFavList(
-      JSON.parse(localStorage.getItem("FavStorage6")).filter((x) => x.length) ||
-        []
+
+      JSON.parse(localStorage.getItem("FavStorage6")).filter(
+        (x) => x.length || typeof x == "object"
+      )
+
     );
   }, [fav]);
 

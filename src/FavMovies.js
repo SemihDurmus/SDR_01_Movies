@@ -1,10 +1,18 @@
+import React, { useEffect, useState, useCallback } from "react";
 import { StyledCardList } from "./components/CardList/CardList.style";
-import { Card } from "./components/Card";
+import { FavoriteCard } from "./components/FavoriteCard";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFilm } from "@fortawesome/free-solid-svg-icons";
+import { useHistory } from "react-router-dom";
+
+
+const baseImageUrl = "https://image.tmdb.org/t/p/w500";
 
 function FavMovies() {
-  const baseImageUrl = "https://image.tmdb.org/t/p/w500";
 
   const temporary = JSON.parse(localStorage.getItem("FavStorage6"));
+  const [flag, setFlag] = useState(false);
+  const history = useHistory();
 
   let filmList = temporary.reduce((a, b) => {
     return a.concat(b);
@@ -14,23 +22,46 @@ function FavMovies() {
     (item, index, self) => index === self.findIndex((t) => t.id === item.id)
   );
 
-  console.log(temporary);
+
+  function deleteFav(id) {
+    const updatedList = filmList.filter((item) => item.id !== id);
+    localStorage.setItem("FavStorage6", JSON.stringify(updatedList));
+    setFlag(!flag);
+  }
+
+  // useCallback(() => {
+  //   history.push(`/fav/`);
+  //   window.addEventListener(
+  //     "beforeunload",
+  //     localStorage.setItem("FavStorage6", JSON.stringify(filmList))
+  //   );
+  // }, [flag]);
+
+  // localStorage.setItem("FavStorage6", JSON.stringify(filmList));
+
+
   console.log(filmList);
 
   return (
     <StyledCardList>
+      <header style={{ marginBottom: -30 }}>
+        <h1>
+          <FontAwesomeIcon className="filmIcon" icon={faFilm} />
+          &nbsp; Favorite Movies &nbsp;
+          <FontAwesomeIcon className="filmIcon" icon={faFilm} />
+        </h1>
+      </header>
       {filmList?.map((movie, index) => (
-        <div>
-          <p style={{ color: "yellow" }}>{movie.title}</p>
-        </div>
-        // <Card
-        //   key={index}
-        //   title={movie.title}
-        //   avg={movie.vote_average}
-        //   poster_path={movie.poster_path}
-        //   baseImageUrl={baseImageUrl}
-        //   id={movie.id}
-        // />
+        <FavoriteCard
+          key={index}
+          title={movie.title}
+          avg={movie.vote_average}
+          poster_path={movie.poster_path}
+          baseImageUrl={baseImageUrl}
+          id={movie.id}
+          deleteFav={deleteFav}
+        />
+
       ))}
     </StyledCardList>
   );
