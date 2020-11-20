@@ -37,16 +37,18 @@
 
 ## Features
 
-This app comprises use of Routing, Context, API and local storage in React.js
+This app comprises use of Routing, Context, API, Local storage and Pagination in React.js
 
 - When the user lands the Home page he/she can see a group of movie cards pulled from the database in advance.
 - User can search for movies by entering the search string values. Then can either press the button or press enter to bring the relevant movie cards to screen.
 - Each movie card contains two buttons: one for directing to detailed information page and the other for adding the movie to favorites.
 - User can view the favorite movies (stored in local history) any time he/she enters the website.
+- User can delete the favourite movies with trash button on.
+- User can navigate between pages 
 
 ## How To Use
 
-To use this application, the packages below should be installed prior to running the app. 
+The packages below should be installed prior to running the app. 
 
 ```
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
@@ -65,6 +67,8 @@ To use this application, the packages below should be installed prior to running
     
     "react-dom": "^17.0.1",
     "react-router-dom": "^5.2.0",
+    
+    "react-paginate": "^6.5.0",
     
     "react-scripts": "4.0.0",
 
