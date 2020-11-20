@@ -16,6 +16,7 @@ export const MovieContext = createContext();
 
 function Movie() {
   const [movieList, setMovieList] = useState([]);
+
   const [searchKeyword, setSearchKeyword] = useState("earth");
   const [fav, setFav] = useState("");
   const [favList, setFavList] = useState([]);
@@ -37,17 +38,15 @@ function Movie() {
 
   useEffect(() => {
     setFavList(
-
-      JSON.parse(localStorage.getItem("FavStorage6")).filter(
+      JSON.parse(localStorage.getItem("FavStorage")).filter(
         (x) => x.length || typeof x == "object"
       )
-
     );
   }, [fav]);
 
   useEffect(() => {
     let temp = movieList.filter((item) => item.id == fav);
-    localStorage.setItem("FavStorage6", JSON.stringify([...favList, temp]));
+    localStorage.setItem("FavStorage", JSON.stringify([...favList, temp]));
   }, [favList]);
 
   console.log(favList);

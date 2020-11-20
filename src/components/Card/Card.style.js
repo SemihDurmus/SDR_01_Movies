@@ -30,6 +30,7 @@ export const StyledText = styled.p`
   color: #95a5a6;
   font-size: 1.2rem;
   font-family: "Rajdhani", sans-serif;
+  text-align: center;
 `;
 export const StyledAvg = styled.p`
   color: tomato;
@@ -55,7 +56,7 @@ export const StyledButtonContainer = styled.div`
 export const StyledButton = styled.button`
   background-color: transparent;
   border: none;
-
+  outline: none;
   &:active {
     outline: none;
     border: none;
