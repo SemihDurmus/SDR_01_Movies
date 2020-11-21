@@ -25,7 +25,7 @@
 
 ## Overview
 
-<img src="src/assets/Movie.gif" width="800">
+<img src="src/assets/Movies.gif" width="800">
 
 ### Built With
 
