@@ -81,8 +81,9 @@ The packages below should be installed prior to running the app.
 
 <!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For exmpale -->
 
-- [Source of APIs : The Movie Database](https://www.themoviedb.org/)
-- [A good article on use of Local Storage](https://www.robinwieruch.de/local-storage-react#introduction-to-local-storage)
+- Source of APIs : [The Movie Database](https://www.themoviedb.org/)
+- A good article on use of Local Storage: [link](https://www.robinwieruch.de/local-storage-react#introduction-to-local-storage)
+- A good article on Pagination: [link](https://ihsavru.medium.com/react-paginate-implementing-pagination-in-react-f199625a5c8e)
 
 ## Contact
 
