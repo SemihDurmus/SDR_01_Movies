@@ -2,10 +2,14 @@
 
 
 <div align="center">
-  <h3>
+  <h3 align="center">
     <a href="https://github.com/SemihDurmus/SDR_01_Movies.git">
       Project Source
+    </a> |
+        <a href="https://semihdurmus.github.io/SDR_01_Movies/">
+      Live Demo
     </a>
+    
  
   </h3>
 </div>
