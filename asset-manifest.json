@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/SDR_01_Movies/static/css/main.9b20f6ef.chunk.css",
+    "main.js": "/SDR_01_Movies/static/js/main.db745d81.chunk.js",
+    "main.js.map": "/SDR_01_Movies/static/js/main.db745d81.chunk.js.map",
+    "runtime-main.js": "/SDR_01_Movies/static/js/runtime-main.21913422.js",
+    "runtime-main.js.map": "/SDR_01_Movies/static/js/runtime-main.21913422.js.map",
+    "static/js/2.2ee183bc.chunk.js": "/SDR_01_Movies/static/js/2.2ee183bc.chunk.js",
+    "static/js/2.2ee183bc.chunk.js.map": "/SDR_01_Movies/static/js/2.2ee183bc.chunk.js.map",
+    "static/js/3.466d4c61.chunk.js": "/SDR_01_Movies/static/js/3.466d4c61.chunk.js",
+    "static/js/3.466d4c61.chunk.js.map": "/SDR_01_Movies/static/js/3.466d4c61.chunk.js.map",
+    "index.html": "/SDR_01_Movies/index.html",
+    "static/css/main.9b20f6ef.chunk.css.map": "/SDR_01_Movies/static/css/main.9b20f6ef.chunk.css.map",
+    "static/js/2.2ee183bc.chunk.js.LICENSE.txt": "/SDR_01_Movies/static/js/2.2ee183bc.chunk.js.LICENSE.txt",
+    "static/media/na.6af51405.png": "/SDR_01_Movies/static/media/na.6af51405.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.21913422.js",
+    "static/js/2.2ee183bc.chunk.js",
+    "static/css/main.9b20f6ef.chunk.css",
+    "static/js/main.db745d81.chunk.js"
+  ]
+}
